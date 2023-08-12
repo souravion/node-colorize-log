@@ -1,4 +1,4 @@
-const { textColor } = require('./colors.utils')
+const { textColor , bgColor } = require('./colors.utils')
 
 function applyStyle(text, styleCode) {
     return `\x1b[${styleCode}m${text}\x1b[0m`;
@@ -9,45 +9,76 @@ function applyColor(text, colorCode) {
 }
 
 function green(message) {
-    return applyColor(`[SUCCESS] ${message}`, textColor.green); 
+    return applyColor(`${message}`, textColor.green); 
 }
 
 function red(message) {
-    return applyColor(`[ERROR] ${message}`, textColor.red);
+    return applyColor(`${message}`, textColor.red);
 }
 
 function black(message) {
-    return applyColor(`[INFO] ${message}`, textColor.black); // Blue
+    return applyColor(`${message}`, textColor.black); 
 }
 
 function yellow(message) {
-    return applyColor(`[INFO] ${message}`, textColor.yellow); // Blue
+    return applyColor(`${message}`, textColor.yellow);
 }
 
 function blue(message) {
-    return applyColor(`[INFO] ${message}`, textColor.blue); // Blue
+    return applyColor(`${message}`, textColor.blue);
 }
 
 function magenta(message) {
-    return applyColor(`[INFO] ${message}`, textColor.magenta); // Blue
+    return applyColor(`${message}`, textColor.magenta); 
 }
 
 function cyan(message) {
-    return applyColor(`[INFO] ${message}`, textColor.cyan); // Blue
+    return applyColor(`${message}`, textColor.cyan); 
 }
 
 function white(message) {
-    return applyColor(`[INFO] ${message}`, textColor.white); // Blue
+    return applyColor(`${message}`, textColor.white);
 }
+
+
+function bgGreen(message) {
+    return applyColor(`${message}`, bgColor.green); 
+}
+
+function bgRed(message) {
+    return applyColor(`${message}`, bgColor.red);
+}
+
+function bgBlack(message) {
+    return applyColor(`${message}`, bgColor.black); 
+}
+
+function bgYellow(message) {
+    return applyColor(`${message}`, bgColor.yellow);
+}
+
+function bgBlue(message) {
+    return applyColor(`${message}`, bgColor.blue);
+}
+
+function bgMagenta(message) {
+    return applyColor(`${message}`, bgColor.magenta); 
+}
+
+function bgCyan(message) {
+    return applyColor(`${message}`, bgColor.cyan); 
+}
+
+
 
 
 
 function bold(text) {
-    return applyStyle(text, 1); // Bold
+    return applyStyle(text, 1); 
 }
 
 function underline(text) {
-    return applyStyle(text, 4); // Underline
+    return applyStyle(text, 4);
 }
 
 module.exports = {
@@ -60,5 +91,12 @@ module.exports = {
     cyan,
     white,
     bold,
-    underline
+    underline,
+    bgGreen,
+    bgRed,
+    bgBlack,
+    bgYellow,
+    bgBlue,
+    bgMagenta,
+    bgCyan
 };
