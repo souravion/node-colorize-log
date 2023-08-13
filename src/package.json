@@ -1,7 +1,7 @@
 {
-  "name": "node-colorize-log",
+  "name": "console-color-log",
   "version": "1.0.0",
-  "description": "Colorize and style console logs in Node.js with ease using node-colorize-log.",
+  "description": "Colorize and style console logs in Node.js with ease using console-color-log.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
